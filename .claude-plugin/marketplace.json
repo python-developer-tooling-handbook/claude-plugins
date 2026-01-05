@@ -1,18 +1,17 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "python-tooling-handbook",
+  "version": "1.0.0",
+  "description": "Claude Code plugins from the Python Developer Tooling Handbook",
   "owner": {
     "name": "Tim Hopper"
-  },
-  "metadata": {
-    "description": "Claude Code plugins from the Python Developer Tooling Handbook",
-    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "new-python-project",
-      "source": "./plugins/new-python-project",
       "description": "Set up Python projects with modern tooling (uv, pytest, ruff, pre-commit)",
-      "version": "1.0.0"
+      "source": "./plugins/new-python-project",
+      "category": "development"
     }
   ]
 }

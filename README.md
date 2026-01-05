@@ -1,12 +1,12 @@
-# Claude Code Skill: New Python Project
+# Claude Code Plugin: New Python Project
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for setting up Python projects with modern tooling.
+A [Claude Code](https://claude.com/claude-code) plugin for setting up Python projects with modern tooling.
 
-Part of the [Python Developer Tooling Handbook](https://github.com/python-developer-tooling-handbook).
+Part of the [Python Developer Tooling Handbook](https://pythontooling.com).
 
-## What This Skill Does
+## What This Plugin Does
 
-This skill helps Claude Code set up Python projects using best practices:
+This plugin provides a skill that helps Claude Code set up Python projects using best practices:
 
 - **uv** for package and environment management
 - **pytest** for testing with coverage
@@ -18,24 +18,16 @@ It handles new projects, adding tooling to existing code, and converting legacy 
 
 ## Installation
 
-Add this skill to your Claude Code configuration:
+Install the plugin using the Claude Code CLI:
 
 ```bash
-# Global installation (available in all projects)
-claude mcp add-skill --global python-developer-tooling-handbook/claude-skill-new-python-project
-
-# Or per-project
-claude mcp add-skill python-developer-tooling-handbook/claude-skill-new-python-project
+/plugin install python-developer-tooling-handbook/claude-skill-new-python-project
 ```
 
-Alternatively, add to your `.claude/settings.json`:
+Or add it globally:
 
-```json
-{
-  "skills": [
-    "python-developer-tooling-handbook/claude-skill-new-python-project"
-  ]
-}
+```bash
+/plugin install --global python-developer-tooling-handbook/claude-skill-new-python-project
 ```
 
 ## Usage
@@ -50,6 +42,16 @@ Once installed, ask Claude Code things like:
 
 The skill will guide Claude to ask clarifying questions and apply the appropriate tooling.
 
+## Plugin Structure
+
+```
+.claude-plugin/
+└── plugin.json          # Plugin manifest
+skills/
+└── new-python-project/
+    └── SKILL.md         # Skill definition
+```
+
 ## Requirements
 
 - [uv](https://docs.astral.sh/uv/) must be installed (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
@@ -57,6 +59,7 @@ The skill will guide Claude to ask clarifying questions and apply the appropriat
 ## Learn More
 
 - [Python Developer Tooling Handbook](https://pythontooling.com) - Comprehensive guide to modern Python tooling
+- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins)
 - [uv Documentation](https://docs.astral.sh/uv/)
 - [ruff Documentation](https://docs.astral.sh/ruff/)
 

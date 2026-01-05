@@ -1,0 +1,11 @@
+{
+  "name": "new-python-project",
+  "description": "Claude Code plugin for setting up Python projects with modern tooling (uv, pytest, ruff, pre-commit)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tim Hopper"
+  },
+  "homepage": "https://pythontooling.com",
+  "repository": "https://github.com/python-developer-tooling-handbook/claude-skill-new-python-project",
+  "license": "MIT"
+}

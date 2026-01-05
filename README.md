@@ -1,12 +1,26 @@
-# Claude Code Plugin: New Python Project
+# Claude Code Plugins: Python Developer Tooling Handbook
 
-A [Claude Code](https://claude.com/claude-code) plugin for setting up Python projects with modern tooling.
+Claude Code plugins from the [Python Developer Tooling Handbook](https://pythontooling.com).
 
-Part of the [Python Developer Tooling Handbook](https://pythontooling.com).
+## Installation
 
-## What This Plugin Does
+Install all plugins from this collection:
 
-This plugin provides a skill that helps Claude Code set up Python projects using best practices:
+```bash
+/plugin install python-developer-tooling-handbook/claude-plugins
+```
+
+Or add globally:
+
+```bash
+/plugin install --global python-developer-tooling-handbook/claude-plugins
+```
+
+## Available Skills
+
+### new-python-project
+
+Set up Python projects with modern tooling:
 
 - **uv** for package and environment management
 - **pytest** for testing with coverage
@@ -14,42 +28,20 @@ This plugin provides a skill that helps Claude Code set up Python projects using
 - **pre-commit** for automated code quality
 - **mypy** for type checking (optional)
 
-It handles new projects, adding tooling to existing code, and converting legacy projects.
-
-## Installation
-
-Install the plugin using the Claude Code CLI:
-
-```bash
-/plugin install python-developer-tooling-handbook/claude-skill-new-python-project
-```
-
-Or add it globally:
-
-```bash
-/plugin install --global python-developer-tooling-handbook/claude-skill-new-python-project
-```
-
-## Usage
-
-Once installed, ask Claude Code things like:
-
+**Usage examples:**
 - "Set up a new Python project called my-tool"
 - "Create a CLI package named mycli"
 - "Add pytest and ruff to this project"
 - "Convert this to a proper Python package"
-- "Set up pre-commit hooks"
-
-The skill will guide Claude to ask clarifying questions and apply the appropriate tooling.
 
 ## Plugin Structure
 
 ```
 .claude-plugin/
-└── plugin.json          # Plugin manifest
+└── plugin.json              # Plugin manifest
 skills/
 └── new-python-project/
-    └── SKILL.md         # Skill definition
+    └── SKILL.md             # Python project setup skill
 ```
 
 ## Requirements
@@ -58,7 +50,7 @@ skills/
 
 ## Learn More
 
-- [Python Developer Tooling Handbook](https://pythontooling.com) - Comprehensive guide to modern Python tooling
+- [Python Developer Tooling Handbook](https://pythontooling.com)
 - [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins)
 - [uv Documentation](https://docs.astral.sh/uv/)
 - [ruff Documentation](https://docs.astral.sh/ruff/)

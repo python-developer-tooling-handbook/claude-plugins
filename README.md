@@ -7,7 +7,7 @@ Claude Code plugins from the [Python Developer Tooling Handbook](https://pythont
 Add the marketplace:
 
 ```bash
-/plugin marketplace add python-developer-tooling-handbook/claude-plugins
+/plugin marketplace add https://github.com/python-developer-tooling-handbook/claude-plugins
 ```
 
 Then install plugins from it:
@@ -16,7 +16,6 @@ Then install plugins from it:
 /plugin install new-python-project@python-tooling-handbook
 ```
 
-Or install all plugins at once when adding the marketplace.
 
 ## Available Plugins
 
@@ -35,20 +34,6 @@ Set up Python projects with modern tooling:
 - "Create a CLI package named mycli"
 - "Add pytest and ruff to this project"
 - "Convert this to a proper Python package"
-
-## Marketplace Structure
-
-```
-.claude-plugin/
-└── marketplace.json             # Marketplace manifest
-plugins/
-└── new-python-project/
-    ├── .claude-plugin/
-    │   └── plugin.json          # Plugin manifest
-    └── skills/
-        └── new-python-project/
-            └── SKILL.md         # Skill definition
-```
 
 ## Requirements
 

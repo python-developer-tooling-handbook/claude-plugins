@@ -11,16 +11,34 @@ This skill helps set up Python projects using modern tooling. Use it for:
 - Converting legacy projects to modern standards
 - Setting up specific components (just testing, just linting, etc.)
 
-## First: Understand the Situation
+## First: ALWAYS Ask Clarifying Questions
 
-Use AskUserQuestion to clarify what's needed. Adapt questions to context:
+Before creating anything, ALWAYS use AskUserQuestion to confirm key details. Even when the request seems obvious, there are decisions only the user can make.
 
+**Always ask about:**
+1. **Location** - Where should the project be created? (current directory, specific path, temp directory)
+2. **Tooling scope** - Include type checking with mypy? What level of linting strictness?
+3. **Testing** - Set up pytest with coverage? Any specific test framework preferences?
+
+**Also ask when relevant:**
 - **Starting fresh or existing code?** - Determines if we use `uv init` or add tooling to what's there
 - **Package or application?** - Packages are imported by others (`uv init --package`), apps are run directly (`uv init`)
-- **What's the scope?** - Full setup? Just add pytest? Just configure ruff? Add a CLI?
-- **Any constraints?** - Python version, specific dependencies, org standards, existing CI
+- **Any constraints?** - Python version requirements, specific dependencies, org standards
 
-Don't ask unnecessary questions - if user says "set up a CLI tool called foo", you already know: it's new, it's a package, it needs a CLI entry point.
+**Example questions for "create a CLI named foo":**
+```
+Where should I create this project?
+  [ ] Current directory (/path/to/cwd)
+  [ ] Create in /tmp/foo
+  [ ] Other...
+
+What tooling level do you want?
+  [ ] Full setup (pytest, ruff, mypy, pre-commit)
+  [ ] Standard (pytest, ruff, pre-commit - no type checking)
+  [ ] Minimal (just ruff)
+```
+
+Do NOT skip questions just because you can infer some details. The user deserves input on where their project goes and how it's configured.
 
 ## Core Tooling
 

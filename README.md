@@ -4,19 +4,21 @@ Claude Code plugins from the [Python Developer Tooling Handbook](https://pythont
 
 ## Installation
 
-Install all plugins from this collection:
+Add the marketplace:
 
 ```bash
-/plugin install python-developer-tooling-handbook/claude-plugins
+/plugin marketplace add python-developer-tooling-handbook/claude-plugins
 ```
 
-Or add globally:
+Then install plugins from it:
 
 ```bash
-/plugin install --global python-developer-tooling-handbook/claude-plugins
+/plugin install new-python-project@python-tooling-handbook
 ```
 
-## Available Skills
+Or install all plugins at once when adding the marketplace.
+
+## Available Plugins
 
 ### new-python-project
 
@@ -34,14 +36,18 @@ Set up Python projects with modern tooling:
 - "Add pytest and ruff to this project"
 - "Convert this to a proper Python package"
 
-## Plugin Structure
+## Marketplace Structure
 
 ```
 .claude-plugin/
-└── plugin.json              # Plugin manifest
-skills/
+└── marketplace.json             # Marketplace manifest
+plugins/
 └── new-python-project/
-    └── SKILL.md             # Python project setup skill
+    ├── .claude-plugin/
+    │   └── plugin.json          # Plugin manifest
+    └── skills/
+        └── new-python-project/
+            └── SKILL.md         # Skill definition
 ```
 
 ## Requirements
@@ -52,6 +58,7 @@ skills/
 
 - [Python Developer Tooling Handbook](https://pythontooling.com)
 - [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins)
+- [Claude Code Marketplaces Documentation](https://code.claude.com/docs/en/plugin-marketplaces)
 - [uv Documentation](https://docs.astral.sh/uv/)
 - [ruff Documentation](https://docs.astral.sh/ruff/)
 

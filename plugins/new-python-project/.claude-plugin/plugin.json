@@ -1,0 +1,9 @@
+{
+  "name": "new-python-project",
+  "description": "Set up Python projects with modern tooling (uv, pytest, ruff, pre-commit)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tim Hopper"
+  },
+  "license": "MIT"
+}

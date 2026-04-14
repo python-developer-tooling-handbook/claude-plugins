@@ -1,0 +1,22 @@
+{
+  "name": "pydevtools",
+  "description": "Python tooling enforcement, workflow skills, and best practices from the Python Developer Tooling Handbook",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tim Hopper",
+    "url": "https://pydevtools.com"
+  },
+  "homepage": "https://pydevtools.com",
+  "repository": "https://github.com/python-developer-tooling-handbook/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "uv",
+    "ruff",
+    "ty",
+    "pytest",
+    "tooling",
+    "best-practices",
+    "migration"
+  ]
+}

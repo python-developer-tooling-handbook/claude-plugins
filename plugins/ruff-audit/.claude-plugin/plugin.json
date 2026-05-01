@@ -1,0 +1,9 @@
+{
+  "name": "ruff-audit",
+  "description": "Audit a project's Ruff linter configuration and recommend rules to enable",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tim Hopper"
+  },
+  "license": "MIT"
+}

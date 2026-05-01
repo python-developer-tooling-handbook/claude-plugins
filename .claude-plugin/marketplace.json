@@ -12,6 +12,12 @@
       "description": "Set up Python projects with modern tooling (uv, pytest, ruff, pre-commit)",
       "source": "./plugins/new-python-project",
       "category": "development"
+    },
+    {
+      "name": "ruff-audit",
+      "description": "Audit a project's Ruff linter configuration and recommend rules to enable",
+      "source": "./plugins/ruff-audit",
+      "category": "development"
     }
   ]
 }
